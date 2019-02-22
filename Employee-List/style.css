@@ -1,0 +1,15 @@
+#form{
+    background-color: rgb(23, 32, 32);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    height: 5000px;
+    width: 20%;
+    float:left;
+    align-content: center;
+    padding: 100px;
+    font-size: 30px;
+}
+#form :hover{
+color :yellow;
+background-color: navy;
+}
