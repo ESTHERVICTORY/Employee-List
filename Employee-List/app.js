@@ -42,6 +42,93 @@ const employeeList = [{
 }
 ];
 
+let command = " ";
+const print = function () {
+  let newString = " ";
+  for (let i = 0; i < employeeList.length; i++) {
+    newString += `<div class="entry"><p> ${employeeList[i].name}</p><p> ${employeeList[i].officeNum}</p><p> ${employeeList[i].phoneNum}</p></div> `;
+  }
+  render(newString);
+}
+
+console.log(employeeList[i]);
+
+const runCommand = function () {
+  console.log("add");
+  event.preventDefault();
+  switch (command) {
+    case 'add':
+      add();
+      break;
+    case 'verify':
+      verify();
+      break;
+    case 'update':
+      update();
+      break;
+      case 'Delete':
+      Delete();
+      break;
+  }
+}
+const setView = function () {
+  $('#list').empty();
+  command = " ";
+  $('form').hide();
+  print();
+}
+
+const setAdd = function () {
+  $('#list').empty();
+  command = "add ";
+  $('form').show();
+  $('.extra-inputs').show();
+  print();
+}
+
+const setVerify = function () {
+  $('#list').empty();
+  command = "veify ";
+  $('form').show();
+  $('.extra-inputs').hide();
+  print();
+}
+
+const setDelete =function(){
+  $('#list').empty();
+  command = "delete ";
+  $('form').show();
+  $('.extra-inputs').hide();
+}
+const add = function () {
+  const userName = $('#name').val();
+  const officeNum = $('#officeNumber').val();
+  const phoneNum = $('#phoneNumber').val();
+  employeeList.push({
+    name: userName,
+    officeNum: officeNum,
+    phoneNum: phoneNum
+  })
+  print();
+}
+const verify =function(){
+  const userName =$('#name').val();
+  let newString ='no';
+  for (let i = 0; i < employeeList.length; i++){
+    if(employeeList[i].name === userName){
+      newString ='yes';
+    }
+  }
+  render(newString);
+}
+const render = function (newString) {
+  $('#list').html(newString);
+}
+
+$('#view').on('click', setView);
+$('#view').on('click', setAdd);
+$('#view').on('click', setUpdate);
+$('#view').on('click', setView);
 
 // for (let i = 0; i < employeeList.length; i++) {
 //   const newDiv = $('<div>');
