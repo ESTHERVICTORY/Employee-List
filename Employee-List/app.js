@@ -41,17 +41,29 @@ const employeeList = [{
   phoneNum: '222-789-5231'
 }
 ];
+console.log(employeeList[1]);
+console.log("hey");
+// function render (newString){
+// let command = " ";
+// const print = function () {
+//   let newString = " ";
+//   for (let i = 0; i < employeeList.length; i++) {
+//     newString += `<div class="entry"><p> ${employeeList[i].name}</p><p> ${employeeList[i].officeNum}</p><p> ${employeeList[i].phoneNum}</p></div> `;
+//   }
+//   render(newString);
+// }
+// }
+// print();
 
-let command = " ";
-const print = function () {
-  let newString = " ";
-  for (let i = 0; i < employeeList.length; i++) {
-    newString += `<div class="entry"><p> ${employeeList[i].name}</p><p> ${employeeList[i].officeNum}</p><p> ${employeeList[i].phoneNum}</p></div> `;
-  }
-  render(newString);
-}
+console.log(employeeList[4]);
 
-console.log(employeeList[i]);
+// Using JavaScript programmatically append each drinkList item to the 'drink-options' div
+
+for (let i = 0; i < employeeList.length; i++) {
+  const newDiv = $('<div>');
+  newDiv.text(`${employeeList[i]['name']+ " " + employeeList[i]['officeNum']+ " " + employeeList[i]['phoneNum']}`);
+  $('#list').append(newDiv);
+};
 
 const runCommand = function () {
   console.log("add");
@@ -100,6 +112,14 @@ const setDelete =function(){
   $('form').show();
   $('.extra-inputs').hide();
 }
+
+const setUpdate =function(){
+  $('#list').empty();
+  command = "update ";
+  $('form').show();
+  $('.extra-inputs').hide();
+}
+
 const add = function () {
   const userName = $('#name').val();
   const officeNum = $('#officeNumber').val();
@@ -111,6 +131,15 @@ const add = function () {
   })
   print();
 }
+const remove =function(){
+  const userName =$('#name').val();
+  let newString ='no';
+  for (let i = 0; i < employeeList.length; i++){
+    if(employeeList[i].name === userName){
+      employeeList.splice;
+    }
+  }
+
 const verify =function(){
   const userName =$('#name').val();
   let newString ='no';
@@ -126,10 +155,11 @@ const render = function (newString) {
 }
 
 $('#view').on('click', setView);
-$('#view').on('click', setAdd);
-$('#view').on('click', setUpdate);
-$('#view').on('click', setView);
-
+$('#add').on('click', setAdd);
+$('#update').on('click', setUpdate);
+$('#delete').on('click', setDelete);
+$('#verify').on('click', setVerify);
+}
 // for (let i = 0; i < employeeList.length; i++) {
 //   const newDiv = $('<div>');
 //   newDiv.text(`${employeeList[i]}`);
@@ -145,7 +175,7 @@ $('#view').on('click', setView);
 // newDiv.attr('class', 'drink');
 // };
 
-
+   
 
 // for (let i = 0; i < employeeList.length; i++){
 //   const Employee= employeeList[i];
@@ -166,4 +196,3 @@ $('#view').on('click', setView);
 // };
 
 // $("#View").on("click",showVerify);
-
