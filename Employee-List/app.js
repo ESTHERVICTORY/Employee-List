@@ -94,7 +94,7 @@ const setAdd = function () {
   $('#list').empty();
   command = "add ";
   $('form').show();
-  $('.extra-inputs').show();
+  $('.nav flex-column').show();
   print();
 }
 
@@ -102,7 +102,7 @@ const setVerify = function () {
   $('#list').empty();
   command = "veify ";
   $('form').show();
-  $('.extra-inputs').hide();
+  $('.nav flex-column').hide();
   print();
 }
 
@@ -110,14 +110,14 @@ const setDelete =function(){
   $('#list').empty();
   command = "delete ";
   $('form').show();
-  $('.extra-inputs').hide();
+  $('.nav flex-column').hide();
 }
 
 const setUpdate =function(){
   $('#list').empty();
   command = "update ";
   $('form').show();
-  $('.extra-inputs').hide();
+  $('.nav flex-column').hide();
 }
 
 const add = function () {
