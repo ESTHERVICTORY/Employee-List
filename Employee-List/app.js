@@ -64,7 +64,17 @@ for (let i = 0; i < employeeList.length; i++) {
   newDiv.text(`${employeeList[i]['name']+ " " + employeeList[i]['officeNum']+ " " + employeeList[i]['phoneNum']}`);
   $('#list').append(newDiv);
 };
-
+$(document).ready(function(){
+  $("#view").click(function(){
+    $("#name, #office, #phone,#search").hide();
+});
+  });
+//show verify
+$(document).ready(function(){
+  $("#verify").click(function(){
+    $("#office, #phone,#list").hide();
+});
+  });
 const runCommand = function () {
   console.log("add");
   event.preventDefault();
