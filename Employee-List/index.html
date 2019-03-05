@@ -3,27 +3,34 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
-            integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
-            integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
-            crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
-        <link rel="javascript" href="app.js">
-        <link rel="javascript" href="dom.js">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+        integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
+        integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="dom.js"></script>
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>Employee List</title>
 </head>
 
@@ -34,35 +41,159 @@
                 <span class="glyphicon glyphicon-user"></span> User
         </li> -->
         <li class="nav-item">
-            <a class="nav-link">View</a>
+            <a class="nav-link" id="view">View</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link">Add</a>
+            <a class="nav-link" id="add">Add</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link">Verify</a>
+            <a class="nav-link" id="verify">Verify</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link">Delete</a>
+            <a class="nav-link " id="delete">Delete</a>
         </li>
     </ul>
     <form>
-            <div class="form-row">
-              <div class="col-3">
-                <input type="text" class="form-control" placeholder="Name">
-              </div>
-              <div class="col-3">
-                <input type="text" class="form-control" placeholder="Office_Number">
-              </div>
-              <div class="col-3">
-                <input type="text" class="form-control" placeholder="Phone_Number">
-              </div>
-              <button class="col-0.5" type="button" class="btn btn-default">
-                    <span class="glyphicon glyphicon-search"></span> Search
-                  </button>
+        <div class="form-row">
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Name" id="name">
             </div>
-          </form>   
-          <div id="list"> </div>  
+            <div class="col-3" id="num2">
+                <input type="text" class="form-control" placeholder="Office_Number" id="officeNum">
+            </div>
+            <div class="col-3" id="num1">
+                <input type="text" class="form-control" placeholder="Phone_Number" id="phoneNum">
+            </div>
+            <button class="col-0.5" type="button" class="btn btn-default">
+                <span id="search" class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </div>
+    </form>
+
+    <div id="employeeList"> </div>
+    <p>Employee List</p>
+    <div id="list"></div>
 </body>
+<script>
+    const newArray = [{
+        name: 'Jan',
+        officeNum: 1,
+        phoneNum: '222-222-2222'
+    },
+    {
+        name: 'Juan',
+        officeNum: 304,
+        phoneNum: '489-789-8789'
+    },
+    {
+        name: 'Margie',
+        officeNum: 789,
+        phoneNum: '789-789-7897'
+    },
+    {
+        name: 'Sara',
+        officeNum: 32,
+        phoneNum: '222-789-4654'
+    },
+    {
+        name: 'Tyrell',
+        officeNum: 3,
+        phoneNum: '566-621-0452'
+    },
+    {
+        name: 'Tasha',
+        officeNum: 213,
+        phoneNum: '789-766-5675'
+    },
+    {
+        name: 'Ty',
+        officeNum: 211,
+        phoneNum: '789-766-7865'
+    },
+    {
+        name: 'Sarah',
+        officeNum: 345,
+        phoneNum: '222-789-5231'
+    }
+    ];
+    // console.log(newArray);
+    let command = " ";
+
+    for (i = 0; i < newArray.length; i++) {
+        $(`#list`).append(`<div>${newArray[i].name}</div> <div>${newArray[i].officeNum}</div> <div><p>${newArray[i].phoneNum}</div><p>`);
+    }
+
+    $("#view").click(function (event) {
+        $(".form-row").hide();
+        $("#form").show();
+        $("#list").show();
+        command = " ";
+    })
+
+    $("#add").click(function () {
+        $("#num1").show();
+        $("#num2").show();
+        $("#name").show();
+        $("#form").show();
+        $("#list").show();
+        $(".form-row").show();
+    })
+
+    $("#verify").click(function () {
+        $("#form").show();
+        $("#list").hide();
+        $("#num1").hide();
+        $("#num2").hide();
+        $("#name").show();
+        $(".form-row").show();
+    })
+    $("#delete").click(function () {
+        $("#form").show();
+        $("#list").show();
+        $("#num1").hide();
+        $("#num2").hide();
+        $("#name").show();
+        $(".form-row").show();
+    })
+console.log(document.getElementById("officeNum").value);
+    var name = document.getElementById("name").value;
+    var officeNum = document.getElementById("officeNum").value;
+    var phoneNum = document.getElementById("phoneNum").value;
+    console.log(phoneNum, officeNum);
+    $("#search").click(function () {
+        for (i = 0; i < newArray.length; i++) {
+            console.log(phoneNum, officeNum);
+        }
+    })
+    command = " ";
+    const add = function(){
+        const name = $('#name').val
+        const officeNum= $('#officeNum').val
+        const phoneNum= $('#phoneNum').val
+    }
+    add();
+const runcommand = function(event){
+    event.preventDefault();
+    switch (command){
+        case 'add':
+        break;
+        case 'verify':
+        break;
+        case 'update':
+        break;
+        case 'delete':
+        break;
+    }
+}
+runcommand();
+const remove = function (){
+const name = $('name').val();
+for (i = 0; i < newArray.length; i++) {
+    if (newArray[i].name ===name){
+        employeeList.splice(1,1);
+    }
+}
+}
+</script>
 
 </html>
